@@ -23,11 +23,11 @@ for FQ in ./fastq/file1.fastq ; do
 	samtools index bam/$NN.CLose.bam
 
 	echo 'Lenght calculation ...'
-	#samtools view bam/$NN.Open.bam | awk '{print lenght($10)}' | sort -n | uniq -c | perl ...
-	#samtools view bam/$NN.Open.bam | awk '{print lenght($10)}' | sort -n | uniq -c | perl ...
+	samtools view bam/$NN.Open.bam | awk '{print lenght($10)}' | sort -n | uniq -c | perl ...
+	samtools view bam/$NN.Open.bam | awk '{print lenght($10)}' | sort -n | uniq -c | perl ...
 
 	echo 'Remoove temp files ...'
-	#rm ./cutadapt/*
-	#rm ./bam/*
+	rm ./cutadapt/*
+	rm ./bam/*
  
 done
